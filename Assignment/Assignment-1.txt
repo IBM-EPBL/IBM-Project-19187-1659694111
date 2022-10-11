@@ -1,0 +1,48 @@
+PYTHON ASSIGNMENT- 1
+1. n=int(input("enter number"))
+count=0
+for j in range(0, n):
+if n%2==0:
+  count+=1
+if count<2:
+print("prime") 
+else:
+print("not a prime")
+
+2. m=int(input())
+n=int(input())
+for i in range(m, n+1):
+    if i%2>0:
+        print(i)
+3. a = int(input("Find prime numbers upto : "))
+ 
+print("\nAll prime numbers upto", a, "are : ")
+ 
+for num in range(2, a+ 1):
+ 
+    i = 2
+ 
+    for i in range(2, num):
+        if(num % i == 0):
+            i = num
+            break;
+ 
+    
+    if(i != num):
+        print(num, end=" ")
+4. n = int(input("How many terms? "))
+n1, n2 = 0, 1
+count = 0
+if n<= 0:
+   print("Please enter a positive integer")
+elif n== 1:
+   print("Fibonacci sequence upto",n,":")
+   print(n1)
+else:
+   print("Fibonacci sequence:")
+   while count < n:
+       print(n1)
+       nth = n1 + n2
+       n1 = n2
+       n2 = nth
+       count += 1
