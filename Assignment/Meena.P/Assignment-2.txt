@@ -1,0 +1,106 @@
+Assignment 2:
+
+1. Create User table with user with email,username,roll number, password.
+
+<Html>  
+<head>   
+<title>  
+Registration Page  
+</title>  
+</head>  
+<body bgcolor="Lightskyblue">  
+<br>  
+<br>  
+<form>  
+  
+<label> Firstname </label>         
+<input type="text" name="firstname" size="15"/> <br> <br>  
+<label> Middlename: </label>     
+<input type="text" name="middlename" size="15"/> <br> <br>  
+<label> Lastname: </label>         
+<input type="text" name="lastname" size="15"/> <br> <br>  
+  
+<label>   
+Course :  
+</label>   
+<select>  
+<option value="Course">Course</option>  
+<option value="BCA">BCA</option>  
+<option value="BBA">BBA</option>  
+<option value="B.Tech">B.Tech</option>  
+<option value="MBA">MBA</option>  
+<option value="MCA">MCA</option>  
+<option value="M.Tech">M.Tech</option>  
+</select>  
+  
+<br>  
+<br>  
+<label>   
+Gender :  
+</label><br>  
+<input type="radio" name="male"/> Male <br>  
+<input type="radio" name="female"/> Female <br>  
+<input type="radio" name="other"/> Other  
+<br>  
+<br>  
+  
+<label>   
+Phone :  
+</label>  
+<input type="text" name="country code" value="+91" size="2"/>   
+<input type="text" name="phone" size="10"/> <br> <br>  
+Address  
+<br>  
+<textarea cols="80" rows="5" value="address">  
+</textarea>  
+<br> <br>  
+Email:  
+<input type="email" id="email" name="email"/> <br>    
+<br> <br>  
+Password:  
+<input type="Password" id="pass" name="pass"> <br>   
+<br> <br>  
+Re-type password:  
+<input type="Password" id="repass" name="repass"> <br> <br>  
+<input type="button" value="Submit"/>  
+</form>  
+</body>  
+</html>  
+
+
+3. Connect python code to db2.
+
+def results(command):
+    from ibm_db import fetch_assoc
+
+    ret = []
+    result = fetch_assoc(command)
+    while result:
+        # This builds a list in memory. Theoretically, if there's a lot of rows,
+        # we could run out of memory. In practice, I've never had that happen.
+        # If it's ever a problem, you could use
+        # yield result
+        # Then this function would become a generator. You lose the ability to access
+        # results by index or slice them or whatever, but you retain
+        # the ability to iterate on them.
+        ret.append(result)
+        result = fetch_assoc(command)
+    return ret # Ditch this line if you choose to use a generator.
+
+4.flask app with registration page
+
+from flask import Flask, redirect, url_for, request
+app = Flask(__name__)
+@app.route('/success/<name>')
+def success(name):
+return 'welcome %s' % name
+@app.route('/login',methods = ['POST', 'GET'])
+def login():
+if request.method == 'POST':
+user = request.form['nm']
+return redirect(url_for('success',name = user))
+else:
+user = request.args.get('nm')
+return redirect(url_for('success',name = user))
+if __name__ == '__main__':
+app.run(debug = True)
