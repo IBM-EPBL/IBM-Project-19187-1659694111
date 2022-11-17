@@ -1,15 +1,0 @@
-o
-    sîæaã  ã                   @   sx   d dl mZmZ d dlmZ d dlmZmZmZ d dl	m
-Z
- d dlmZ edd„ ƒZdd	„ Zd
-d„ Zdd„ Zdd„ ZdS )é    )ÚrenderÚredirect)ÚUser)ÚauthenticateÚloginÚlogout)ÚHttpResponse)Úlogin_requiredc                 C   ó   t | di ƒS )Nzauth_system/index.html©r   ©Úrequest© r   úB/home/reena/Documents/python/authentication/auth_system/views.pyÚHomePage
-   s   r   c                 C   s~   | j dkr9| j d¡}| j d¡}| j d¡}| j d¡}| j d¡}tj |||¡}||_||_| ¡  t	dƒS t
-| di ƒS )	NÚPOSTÚfnameÚsnameÚunameÚemailÚpassú
-login-pagezauth_system/register.html)Úmethodr   Úgetr   ÚobjectsÚcreate_userÚ
-first_nameÚ	last_nameÚsaver   r   )r   r   ÚlnameÚnamer   ÚpasswordÚnew_userr   r   r   ÚRegister   s   
-r#   c                 C   s^   | j dkr)| j d¡}| j d¡}t| ||d}|d ur%t| |ƒ tdƒS tdƒS t| di ƒS )Nr   r   r   )Úusernamer!   z	home-pagezError, user does not existzauth_system/login.html)r   r   r   r   r   r   r   r   )r   r    r!   Úuserr   r   r   ÚLogin   s   
-
-r&   c                 C   s   t | ƒ tdƒS )Nr   )r   r   r   r   r   r   Ú
-logoutuser.   s   r'   c                 C   r
-   )Nzauth_system/test.htmlr   r   r   r   r   Útest2   s   r(   N)Údjango.shortcutsr   r   Údjango.contrib.auth.modelsr   Údjango.contrib.authr   r   r   Údjango.httpr   Údjango.contrib.auth.decoratorsr	   r   r#   r&   r'   r(   r   r   r   r   Ú<module>   s    
-
