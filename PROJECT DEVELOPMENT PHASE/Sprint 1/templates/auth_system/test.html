@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+    <title>Document</title>
+    <style>
+        .button a,.btn a{
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+        }
+        .button {
+            background-color:red;
+            border: none;
+            margin: 10px 10px 0 0;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .right{
+            display: flex;
+            float: right; 
+        }
+        table,tr,td,th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table{
+            width: 80%;
+            /* margin-left: auto;
+            margin-right: auto; */
+        }
+    </style>
+</head>
+<body>
+    <button class="button right"><a href="{% url 'logout' %}">Logout</a></button>
+    <h1>Welcome {{request.user}}</h1>
+    <h3>Your complaints</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Date</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Tel.No</th>
+            <th>Complaint</th>
+            <th>Adviser Name</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table><br>
+    <button class="button"><a href="{% url 'complaint-page' %}">Raise a complaint</a></button>
+</body>
+</html>

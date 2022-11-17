@@ -1,0 +1,40 @@
+body {
+    background-color: grey;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    width: 600px;
+    height: 500px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid dodgerblue;
+}
+
+button {
+    padding: 10px;
+    background-color: dodgerblue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
