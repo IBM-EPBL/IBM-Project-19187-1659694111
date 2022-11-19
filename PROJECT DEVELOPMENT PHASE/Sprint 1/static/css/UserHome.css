@@ -1,0 +1,64 @@
+.main{
+    background-color: rgb(177, 98, 98);
+    height: 80vh;
+}
+ul li{
+    display: inline;
+    padding: 3em;
+}
+nav ul{
+    padding-top: 2em;
+    text-align: center;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    /* font-weight: bold; */
+}
+nav h3{
+    text-align: center;
+    margin-top: 3em;
+    font-size: 4em;
+    font-weight: 200;
+}
+nav h3 span{
+    color: white;
+}
+.back{
+    background-color: rgb(24, 23, 23); 
+    padding: 10px; 
+    border-radius: 2em;
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+}
+.back p{
+    color: rgb(175, 161, 161);
+}
+.back h3,.back-service h3{
+    color: rgb(91, 233, 91);
+}
+.back-service{
+    background-color: rgb(24, 23, 23);
+    height: 30vh;
+    margin: 10px;
+    width: 30%;
+    padding: 10px; 
+    border-radius: 2em;
+     /* padding: 5em; */
+}
+button a{
+    text-decoration: none;
+    color: white;
+}
+.btn2{
+    display: flex;
+    justify-content: space-between;
+}
+.body{
+    background: linear-gradient(#e66465, #9198e5);
+}
+.form{
+    border-radius: 5em;
+}

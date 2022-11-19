@@ -1,0 +1,8 @@
+o
+    sîæa™   ã                   @   s    d dl mZ G dd„ deƒZdS )é    )Ú	AppConfigc                   @   s   e Zd ZdZdZdS )ÚAuthSystemConfigzdjango.db.models.BigAutoFieldÚauth_systemN)Ú__name__Ú
+__module__Ú__qualname__Údefault_auto_fieldÚname© r
+   r
+   úA/home/reena/Documents/python/authentication/auth_system/apps.pyr      s    r   N)Údjango.appsr   r   r
+   r
+   r
+   r   Ú<module>   s    

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/UserHome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        *{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="main">
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">OUR TOP AGENTS</a></li>
+                <li><a href="">RESUME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">CONTACT</a></li>
+                <li><a href="{% url 'login-page' %}">SIGN IN</a></li>
+            </ul>
+            <h3><span>C</span>ustomer <span>C</span>are <span>R</span>egistry</h3>
+        </div>   
+    </nav>
+    <div style="background-color:black; color: white;">
+        <section class="site-section" id="section-sign">
+            <div class="container" style="width: 200 px;">
+                <div class="row text-center mx-auto mb-3">
+                    <h2 class="section-heading text-center col-md-12">Get your <strong> User
+                            Account!</strong> </h2>
+                </div>
+    
+                <div class="row text-center mx-auto mb-5">
+                    <a href="{% url 'login-page' %}" class="btn btn-primary" role="button"><span
+                            style="color:black; font-weight: bolder; height: 100px;">Sign in</span></a>
+                </div><br>
+                <div class="row text-center mx-auto mb-5 mt-5">
+                    <a href="{% url 'register-page' %}" class="btn btn-primary" role="button"><span
+                            style="color:black; font-weight: bolder; height: 100px;">Sign up</span></a>
+                </div>
+    
+    
+                <div class="row text-center mx-auto">
+                    <h2 class="section-heading text-center col-md-12">Get your <strong> Agent
+                            Account!</strong> </h2>
+                </div>
+    
+                <div class="row text-center mx-auto mb-3 ">
+                    <a href="{% url 'login-page' %}" class="btn btn-primary" role="button"><span
+                            style="color:black; font-weight: bolder;">Sign in</span> </a>
+                </div><br>
+    
+                <div class="row text-center mx-auto mb-3 ">
+                    <a href="{% url 'register-page' %}" class="btn btn-primary " role="button"><span
+                            style="color:black; font-weight: bolder;">Sign up</span> </a>
+                </div>  
+            </div>
+        </section>
+        <section class="site-section" id="section-portfolio">
+            <div class="container">
+                <div class="filters">
+                    <!-- <ul>
+                        <li class="active" data-filter="*">All</li>
+                        <li data-filter=".packaging">Hardware Services</li>
+                        <li data-filter=".mockup">Software Services</li>
+                        <li data-filter=".typography">Both Services</li>
+                        <li data-filter=".photography">Online Services</li>
+                    </ul> -->
+                    <h1 style="text-align: center; color: rgb(128, 123, 123);">Our Service Staffs</h1>
+                </div><br>
+                <div class="filters-content">
+                    <div class="row grid p-5">
+                        <div class="col-sm-4 all">
+                            <div class="relative">
+                                <div class="thumb">
+                                    <div class="overlay overlay-bg"></div>
+                                    <img class="image img-fluid" src="https://finalphase.s3.jp-tok.cloud-object-storage.appdomain.cloud/static/assets/images/p4.jpeg" alt="">
+                                </div>
+                                <a href="https://finalphase.s3.jp-tok.cloud-object-storage.appdomain.cloud/static/assets/images/p4.jpeg" class="img-pop-up">
+                                    <div class="middle">
+                                        <div class="text align-self-center d-flex"><img
+                                                src="https://finalphase.s3.jp-tok.cloud-object-storage.appdomain.cloud/static/assets/images/preview.png" alt=""></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-inner">
+                                <h4>Name1 </h4>
+                                <div class="cat">HARDWARE SERVICE</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 all">
+                            <div class="relative">
+                                <div class="thumb">
+                                    <div class="overlay overlay-bg"></div>
+                                    <img class="image img-fluid" src="https://finalphase.s3.jp-tok.cloud-object-storage.appdomain.cloud/static/assets/images/p4.jpeg" alt="">
+                                </div>
+                                <a href="https://finalphase.s3.jp-tok.cloud-object-storage.appdomain.cloud/static/assets/images/p4.jpeg" class="img-pop-up">
+                                    <div class="middle">
+                                        <div class="text align-self-center d-flex"><img
+                                                src="https://finalphase.s3.jp-tok.cloud-object-storage.appdomain.cloud/static/assets/images/preview.png" alt=""></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-inner">
+                                <h4>Name2</h4>
+                                <div class="cat">HARDWARE AND SOFTWARE</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 all">
+                            <div class="relative">
+                                <div class="thumb">
+                                    <div class="overlay overlay-bg"></div>
+                                    <img class="image img-fluid" src="https://finalphase.s3.jp-tok.cloud-object-storage.appdomain.cloud/static/assets/images/p4.jpeg" alt="">
+                                </div>
+                                <a href="https://finalphase.s3.jp-tok.cloud-object-storage.appdomain.cloud/static/assets/images/p4.jpeg" class="img-pop-up">
+                                    <div class="middle">
+                                        <div class="text align-self-center d-flex"><img
+                                                src="https://finalphase.s3.jp-tok.cloud-object-storage.appdomain.cloud/static/assets/images/preview.png" alt=""></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-inner">
+                                <h4>Name3</h4>
+                                <div class="cat">HARDWARE AND SOFTWARE</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4" style="margin-top: 2em;">
+                            <div class="relative">
+                                <div class="thumb">
+                                    <div class="overlay overlay-bg"></div>
+                                    <img class="image img-fluid" src="https://finalphase.s3.jp-tok.cloud-object-storage.appdomain.cloud/static/assets/images/p4.jpeg" alt="">
+                                </div>
+                                <a href="https://finalphase.s3.jp-tok.cloud-object-storage.appdomain.cloud/static/assets/images/p4.jpeg" class="img-pop-up">
+                                    <div class="middle">
+                                        <div class="text align-self-center d-flex"><img
+                                                src="https://finalphase.s3.jp-tok.cloud-object-storage.appdomain.cloud/static/assets/images/preview.png" alt=""></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-inner">
+                                <h4>Name4</h4>
+                                <div class="cat">HARDWARE AND SOFTWARE</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- .section -->
+        <section class="" id="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mb-5"  style="margin-bottom: 3em;">
+                        <div class="section-heading text-center">
+                            <h2>Our <strong>Features</strong></h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6">  
+                        <div class="resume-item mb-4 back">
+                            <span class="date"><span class="fa fa-check-square-o" style="font-size:36px"></span><h2>TOP TICKETING FEATURES </h2></span>
+                            <h3>EMAIL BASED TICKET</h3>
+                            <p>
+                                Convert all incoming customer support emails <br>
+                                 into tickets and respond to them via email.
+                                
+                            </p>
+                            <span class="school">Create and respond to email tickets.</span>
+                        </div>
+    
+                        <div class="resume-item mb-4 back">
+                            <span class="date"><span class="fa fa-check-square-o" style="font-size:36px"></span> <h2>KNOWLEDGE BASE SOFTWARE</h2></span>
+                            <h3>WORKFLOW</h3>
+                            <p>
+                                Design and manage your documentation <br>
+                                 publishing process.
+                                 Create unlimited knowledge base articles. <br>
+                                </p>
+                            <span class="school"> For different brands and products</span>
+                        </div>
+    
+                        <div class="resume-item mb-4 back">
+                            <span class="date"><span class="fa fa-check-square-o" style="font-size:36px"></span><h2> ORGANISE YOUR CONTACT DATA</h2></span>
+                            <h3>FILTER ,SEARCH CONTACT INFORMATION</h3>
+                            <p> Track modifications with a profile history.<br>
+                                
+                                Add notes to keep contact-specific information.</p>
+                            </p>
+                            <span class="school">Block a contact to prevent the creation of spam tickets.</span>
+                        </div>
+    
+                    </div>
+                    <div class="col-md-6">
+                        <div class="resume-item mb-4 back">
+                            <span class="date"><span class="fa fa-check-square-o" style="font-size:36px"></span><h2> TICKETS & SOLVE PROBLEMS</h2></span>
+                            <h3>TICKET INTERACTION </h3>
+                            <p>Customer portal software enables customers to track <br>
+                                and send tickets through an easy-to-use interface.
+                                Technology</p>
+                            <span class="school">Organization-wide tickets</span>
+                        </div>
+    
+                        <div class="resume-item mb-4 back">
+                            <span class="date"><span class="fa fa-check-square-o" style="font-size:36px"></span> <h2> TICKETING SOFTWARE</h2></span>
+                            <h3>POWERFUL , USER-FRIENDLY TOOLS</h3>
+                            <p>Manage all of your support requests, convert emails to tickets, <br>
+                                 automate ticket assignments, customize support forms.</p>
+                            <span class="school">set your own SLA</span>
+                        </div>
+    
+                        <div class="resume-item mb-4 back">
+                            <span class="date"><span class="fa fa-check-square-o" style="font-size:36px"></span> <h2> TICKET INSIGHTS </h2> </span>
+                            <h3>MESSAGE TAG</h3>
+                            <p>Ticket insights provide metrics for each ticket, <br>
+                                 such as response, SLA, assignment, and status.<small></small> </p>
+                            <span class="school">Allows your team to refine support operations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- .section -->
+    
+        <section class="site-section" id="section-about">
+            <div class="container">
+                <div class="row mb-5 align-items-center">
+                    <div class="row">
+                        <div class="section-heading">
+                            <h2>About <strong>Us</strong></h2>
+                        </div>
+                        <p> Syncfusion, the company behind BoldDesk, has been helping developers worldwide build powerful line-of-business 
+                        software for over 20 years. Our flagship component suite includes over 1,700 UI widgets and frameworks that help 
+                        reduce time and complexity when developing mobile, web, and desktop applications.  </p>
+    
+                        <p>Over the past two decades, we have learned quite a bit about providing an optimal support experience on a global 
+                            scale for complex use cases. Our support system is backed by software systems that track every detail accurately. 
+                            Nothing is left to chance. Customers appreciate that every detail is tracked to completion. 
+                            Such actions let them know that we care not just with words in a support policy but in actual practice,
+                             day after day, year after year.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="site-section pb-0" id="section-services">
+            <div class="container">
+    
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <div class="section-heading text-center">
+                            <h2>My <strong>Services</strong></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+    
+                    <div class="col-lg-4 back-service">
+                        <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                            <span class="icon">
+                                <span class="fa fa-clock-o" style="font-size:46px"></span>
+                            </span>
+    
+                            <h3 class="mb-4">Get started in minutes</h3>
+                            <p>tart supporting your customers in no time without requiring an expensive onboarding plan or excessive hand-holding.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 back-service">
+                        <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                            <span class="icon">
+                                <span class="fa fa-group" style="font-size:46px" ></span>
+                            </span>
+                            <h3 class="mb-4">Keep your team on the same page
+                            </h3>
+                            <p>Enable 1:1 or group discussions and collaborate within your team or across other teams from within Freshdesk</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 back-service">
+                        <div class="site-service-item site-animate" data-animate-effect="fadeIn">
+                            <span class="icon">
+                                <span class="fa fa-angle-up" style="font-size:46px"></span>
+                            </span>
+                            <h3 class="mb-4">Increase your capabilities</h3>
+                            <p>Boost your support strategy by integrating with 650+ apps on the Marketplace and resolve tickets more efficiently. </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="site-section" id="section-contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mb-5">
+                        <div class="section-heading text-center">
+                            <h2>Get <strong>In Touch</strong></h2>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-7 mb-5 mb-md-0">
+                        <form action="" class="site-form" method="post">
+                            {% csrf_token %}
+                            <h3 class="mb-5">Get In Touch</h3>
+                            <div class="form-group">
+                                <input name="name" type="text" class="form-control px-3 py-4" id = "name" name= "name" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input name="email" type="email" class="form-control px-3 py-4" id="email" name="email"  placeholder="Your Email">
+                            </div>
+                            <div class="form-group mb-5">
+                                <textarea name="message" class="form-control px-3 py-4" cols="30" rows="10" name="msg" id="msg"
+                                    placeholder="Write a Message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" style="color: black; font-weight: bolder; " class="btn btn-primary  px-4 py-3" value="Send Message">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="site-footer">
+            <div class="container">
+    
+                <div class="row mb-5">
+                    <p class="col-12 text-center">
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved 
+                    </p>
+                </div>
+    
+                <div class="row mb-5">
+                    <div class="col-md-12 text-center">
+                        <p>
+                            <a href="https://github.com/ssrajkiran" class="social-item"><span class="fa fa-github" style="font-size:36px"></span></a>
+                            <a href="https://www.google.com/" class="social-item"><span class="fa fa-twitter" style="font-size:36px"></span></a>
+                            <a href="https://www.google.com/" class="social-item"><span class="fa fa-youtube" style="font-size:36px"></span></a>
+                            <a href="https://www.linkedin.com/in/rajkiran-s-s-9622871b2/" class="social-item"><span
+                                class="fa fa-linkedin" style="font-size:36px"></span></a>
+                        </p>
+                    </div>
+                </div>
+    
+            </div>
+        </footer>
+    
+    
+    </div>
+</body>
+</html>
